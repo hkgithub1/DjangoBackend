@@ -32,9 +32,12 @@ SECRET_KEY = "django-insecure-6hvcc$2903-de0+4&uc(on*v1lkjsq3jasa+#-mgqi-6-@%^1c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CORS_ALLOWED_ORIGINS = ["*"]
-
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "http://www.hkapp.net",
+    "http://hkapp.net",
+    "www.hkapp.net",
+    "hkapp.net",
+]
 
 
 # Application definition
@@ -91,9 +94,9 @@ SIMPLE_JWT = {
 }
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
