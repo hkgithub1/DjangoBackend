@@ -32,7 +32,7 @@ SECRET_KEY = "django-insecure-6hvcc$2903-de0+4&uc(on*v1lkjsq3jasa+#-mgqi-6-@%^1c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+CORS_ALLOWED_ORIGINS = ["*"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -93,12 +93,12 @@ SIMPLE_JWT = {
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",    
 ]
 
 ROOT_URLCONF = "Backend.urls"
