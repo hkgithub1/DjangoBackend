@@ -32,6 +32,10 @@ SECRET_KEY = "django-insecure-6hvcc$2903-de0+4&uc(on*v1lkjsq3jasa+#-mgqi-6-@%^1c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = [
+    "http://54.198.192.165",
+]
+
 CORS_ALLOWED_ORIGINS = [
     "http://www.hkapp.net",
     "http://hkapp.net",
