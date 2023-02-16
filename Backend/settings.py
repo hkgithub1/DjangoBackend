@@ -39,6 +39,13 @@ CORS_ALLOWED_ORIGINS = [
     "hkapp.net",
 ]
 
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 # Application definition
 
