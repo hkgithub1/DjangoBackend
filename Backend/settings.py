@@ -39,8 +39,8 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = [
     "http://www.hkapp.net",
     "http://hkapp.net",
-    "www.hkapp.net",
-    "hkapp.net",
+    "https://www.hkapp.net",
+    "https://hkapp.net",
 ]
 
 CORS_ALLOW_METHODS = [
